@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Normalize } from 'styled-normalize';
+import GlobalStyle from 'components/styles/GlobalStyle';
 import App from 'components/App';
 
 const Root = () => (
   <React.Fragment>
     <Normalize />
+    <GlobalStyle />
     <App />
   </React.Fragment>
 );
