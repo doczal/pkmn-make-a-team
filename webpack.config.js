@@ -1,4 +1,5 @@
 const path = require('path');
+require('dotenv').config();
 
 module.exports = {
   entry: './src/index.js',
@@ -25,7 +26,8 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
-    port: 7777,
+    host: process.env.DEV_HOST,
+    port: process.env.DEV_PORT,
     open: true,
   },
   resolve: {
