@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import SulphurPoint from 'assets/fonts/SulphurPoint-Regular.ttf';
 
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 `;
 
