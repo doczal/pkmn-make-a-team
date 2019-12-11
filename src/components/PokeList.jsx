@@ -14,16 +14,17 @@ const StyledList = styled.div`
   }
 `;
 
-const PokeList = () => {
+const PokeList = ({ pokemon }) => {
+  console.log(pokemon);
   return (
     <StyledList>
       <h2>Pick your Pokemon!</h2>
       <div className="overflow-wrapper">
         <FlexContainer flexWrap="wrap">
-          {[...Array(120)].map((_, idx) => (
+          {pokemon.map((pkmn, idx) => (
             <PokeSlot
               key={idx}
-              pokemon={{ name: 'Pikachu', img: '' }}
+              pokemon={{ name: pkmn.name, img: `${pkmn.name}.png` }}
               bgColor={colors.smoke}
             />
           ))}

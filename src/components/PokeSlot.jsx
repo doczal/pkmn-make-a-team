@@ -18,13 +18,28 @@ const EmptySlot = styled.div`
 const Slot = styled.div`
   border-radius: 8px;
   background-color: ${(props) => props.bgColor};
+
+  img {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 
 const PokeSlot = ({ pokemon, bgColor }) => {
   return (
     <StyledSlot>
       <AspRatioBox>
-        {pokemon ? <Slot bgColor={bgColor} /> : <EmptySlot />}
+        {pokemon ? (
+          <Slot bgColor={bgColor}>
+            <img src={`/sprites/${pokemon.img}`} alt="" />
+          </Slot>
+        ) : (
+          <EmptySlot />
+        )}
       </AspRatioBox>
     </StyledSlot>
   );

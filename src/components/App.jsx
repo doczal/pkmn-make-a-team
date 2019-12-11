@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
+import { pokeApi } from 'api';
 import PokeTeam from './PokeTeam';
 import PokeList from './PokeList';
 import Layout from './styles/Layout';
@@ -14,14 +15,25 @@ const AppContainer = styled.div`
   height: 100%;
 `;
 
-const App = () => (
-  <AppContainer>
-    <Header />
-    <Layout>
-      <PokeTeam />
-      <PokeList />
-    </Layout>
-  </AppContainer>
-);
+const App = () => {
+  const [pokemon, setPokemon] = useState([]);
+  useEffect(() => {
+    const getPokemon = async () => {
+      const res = await pokeApi.get('/pokemon');
+      setPokemon(res.data.results);
+    };
+    // To simulate fetching delay
+    setTimeout(() => getPokemon(), 3000);
+  }, []);
+  return (
+    <AppContainer>
+      <Header />
+      <Layout>
+        <PokeTeam />
+        <PokeList pokemon={pokemon} />
+      </Layout>
+    </AppContainer>
+  );
+};
 
 export default App;
