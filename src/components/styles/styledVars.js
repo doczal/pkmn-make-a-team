@@ -2,6 +2,7 @@ export const colors = {
   white: '#ffffff',
   lite_00: '#ededed',
   lite_01: '#dedede',
+  lite_02: '#cccccc',
   dark_00: '#333333',
   red_00: '#bd0f26',
   red_01: '#e02f2f',
