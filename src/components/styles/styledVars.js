@@ -4,6 +4,7 @@ export const colors = {
   lite_01: '#dedede',
   lite_02: '#cccccc',
   dark_00: '#333333',
+  dark_01: '#444444',
   red_00: '#bd0f26',
   red_01: '#e02f2f',
   lite_blue: '#e3f7ff',
@@ -27,7 +28,7 @@ export const gradients = {
 
 export const screenSize = {
   md: '768px',
-  lg: '1200px',
+  lg: '1100px',
 };
 
 export const mediaQueries = {

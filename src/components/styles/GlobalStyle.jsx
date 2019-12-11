@@ -1,15 +1,24 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from 'components/styles/styledVars';
 import SulphurPoint from 'assets/fonts/SulphurPoint-Regular.ttf';
 
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${colors.lite_02};
+    }
   }
   html {
     height: 100%;
   }
   body {
-    min-height: 100%;
+    height: 100%;
     display: flex;
     overflow: hidden;
 
@@ -19,6 +28,9 @@ const GlobalStyle = createGlobalStyle`
       font-weight: normal;
     }
     font-family: 'Sulphur Point';
+
+    scrollbar-color: ${colors.lite_02};
+    scrollbar-width: 4px;
   }
   #root {
     position: relative;

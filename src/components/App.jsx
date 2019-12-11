@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import PokeTeam from './PokeTeam';
+import PokeList from './PokeList';
 import Layout from './styles/Layout';
 import Header from './Header';
 import Grid from './styles/Grid';
@@ -18,6 +19,7 @@ const App = () => (
     <Header />
     <Layout>
       <PokeTeam />
+      <PokeList />
     </Layout>
   </AppContainer>
 );
