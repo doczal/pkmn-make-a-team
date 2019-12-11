@@ -20,12 +20,16 @@ const StyledLayout = styled.div`
       transform: scale(-1);
     }
   }
+
+  .content {
+    padding: 1.5rem;
+  }
 `;
 
 const Layout = ({ children }) => (
   <StyledLayout>
     <div className="pattern" />
-    <main>{children}</main>
+    <main className="content">{children}</main>
     <div className="pattern right" />
   </StyledLayout>
 );

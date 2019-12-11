@@ -2,6 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 import SulphurPoint from 'assets/fonts/SulphurPoint-Regular.ttf';
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
   html {
     height: 100%;
   }

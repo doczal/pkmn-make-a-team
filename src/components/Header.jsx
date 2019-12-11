@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from './styles/styledVars';
+import { colors, zindex, shadows } from './styles/styledVars';
 
 const StyledHeader = styled.header`
   background: ${colors.white};
   padding: 1rem;
+  z-index: ${zindex.z10};
+  width: 100%;
+  box-shadow: ${shadows.default};
 `;
 
 const Header = () => {

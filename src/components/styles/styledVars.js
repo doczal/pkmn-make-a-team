@@ -7,6 +7,15 @@ export const colors = {
   red_01: '#e02f2f',
   lite_blue: '#e3f7ff',
   lite_pink: '#ffe0f9',
+  smoke: 'rgba(0, 0, 0, 0.1)',
+};
+
+export const zindex = {
+  z10: 10,
+  z20: 20,
+  z30: 30,
+  z40: 40,
+  z50: 50,
 };
 
 export const gradients = {
@@ -23,4 +32,8 @@ export const screenSize = {
 export const mediaQueries = {
   md: `(min-width: ${screenSize.md})`,
   lg: `(min-width: ${screenSize.lg})`,
+};
+
+export const shadows = {
+  default: `0 2px 10px ${colors.smoke}`,
 };
