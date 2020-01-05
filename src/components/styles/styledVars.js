@@ -7,6 +7,7 @@ export const colors = {
   dark_01: '#444444',
   red_00: '#bd0f26',
   red_01: '#e02f2f',
+  blue_00: '#33ace8',
   lite_blue: '#e3f7ff',
   lite_pink: '#ffe0f9',
   smoke: 'rgba(0, 0, 0, 0.1)',

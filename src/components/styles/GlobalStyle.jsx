@@ -13,6 +13,10 @@ const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar-thumb {
       background-color: ${colors.lite_02};
     }
+
+    &:focus, &:active {
+      outline: 0;
+    }
   }
   html {
     height: 100%;

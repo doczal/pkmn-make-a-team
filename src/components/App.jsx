@@ -23,7 +23,7 @@ const App = () => {
       setPokemon(res.data.results);
     };
     // To simulate fetching delay
-    setTimeout(() => getPokemon(), 3000);
+    setTimeout(() => getPokemon(), 250);
   }, []);
   return (
     <AppContainer>
