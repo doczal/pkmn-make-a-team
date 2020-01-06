@@ -6,7 +6,7 @@ import AspRatioBox from 'components/styles/AspRatioBox';
 import { colors } from './styles/styledVars';
 
 const StyledSlot = styled.div`
-  flex: 0 0 12.5%;
+  flex: 0 0 ${(props) => props.width};
   padding: 0.25rem;
 `;
 
@@ -29,9 +29,9 @@ const Slot = styled.div`
   }
 `;
 
-const PokeSlot = ({ pokemon, bgColor }) => {
+const PokeSlot = ({ pokemon, bgColor, width }) => {
   return (
-    <StyledSlot>
+    <StyledSlot width={width}>
       <AspRatioBox>
         {pokemon ? (
           <Slot bgColor={bgColor}>
@@ -48,6 +48,7 @@ const PokeSlot = ({ pokemon, bgColor }) => {
 PokeSlot.defaultProps = {
   bgColor: 'transparent',
   pokemon: null,
+  width: '12.5%',
 };
 
 PokeSlot.propTypes = {
@@ -56,6 +57,7 @@ PokeSlot.propTypes = {
     name: PropTypes.string,
     img: PropTypes.string,
   }),
+  width: PropTypes.string,
 };
 
 export default PokeSlot;

@@ -8,9 +8,10 @@ import { colors, shadows } from './styles/styledVars';
 const StyledPokeTeam = styled.div`
   background: ${colors.white};
   border-radius: 8px;
-  width: 100%;
   padding: 1rem;
   box-shadow: ${shadows.default};
+  width: 80%;
+  align-self: center;
 
   .item {
     width: 10%;
@@ -22,9 +23,9 @@ const StyledPokeTeam = styled.div`
 const PokeTeam = () => {
   return (
     <StyledPokeTeam>
-      <FlexContainer flexWrap={'wrap'} marginOffset={'-0.25rem'}>
-        {[...Array(8)].map((_, idx) => (
-          <PokeSlot key={idx} />
+      <FlexContainer marginOffset={'-0.25rem'}>
+        {[...Array(6)].map((_, idx) => (
+          <PokeSlot width="16.66%" key={idx} />
         ))}
       </FlexContainer>
     </StyledPokeTeam>
